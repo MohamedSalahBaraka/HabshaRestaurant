@@ -1,0 +1,16 @@
+**DelivareyFormerOrders**
+**Dishes**
+**FoodFormerOrders**
+**Home**
+**OrderDelivarey**
+**Setting**
+**AddDish**
+**Addsize**
+**AdressList**
+**Dish**
+**EditDish**
+**OrderDetails**
+**UpdateAdress**
+**UpdateInfo**
+**UpdatePassword**
+formersOrderrestaurant

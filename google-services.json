@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1036688868080",
+    "project_id": "habsharestuarant",
+    "storage_bucket": "habsharestuarant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036688868080:android:97705de000c951bbca7835",
+        "android_client_info": {
+          "package_name": "top.habsha.habsharestaurant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIUpjhAl_HHml-PhVZ_Z5WwoJ8T-zvjqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
