@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
         setUserToken(response.data.token);
         save("userToken", response.data.token);
         setUser(response.data.user);
-        save("user", response.data.user);
+        save("user", JSON.stringify(response.data.user));
         console.log(response.data.token);
         const config = {
           headers: {
@@ -65,14 +65,14 @@ export const AuthProvider = ({ children }) => {
           })
           .catch((e) => {
             console.log(e);
-            console.log("LOGIN", e.response.data);
+            console.log("LOGIN", e?.response?.data);
             setIsLoading(false)
           });
       })
       .catch((e) => {
         console.log(e);
-        console.log("LOGIN", e.response.data);
-        if (e.response.status === 422) {
+        console.log("LOGIN", e?.response?.data);
+        if (e?.response?.status === 422) {
           setphonerespoce(e.response.data.phone);
           settypeResponce(e.response.data.type);
           setpasswordresponce(e.response.data.password);
@@ -131,7 +131,7 @@ export const AuthProvider = ({ children }) => {
         setUserToken(null);
       }
       let user = await SecureStore.getItemAsync("user");
-      setUser(user);
+      setUser(JSON.parse(user));
     } catch (error) {
       console.log(error);
     }

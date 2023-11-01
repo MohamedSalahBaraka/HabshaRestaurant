@@ -231,6 +231,12 @@ export default function Home({ navigation }) {
                         </View>) : null}
                         <Text style={[{ color: Colors.tertiary, fontFamily: 'Alexandria', fontSize: 14, },]}>اهلا {user?.name}</Text>
                     </View>
+                    <TouchableOpacity style={[barakocta.btnInfo, barakocta.p3, barakocta.m2, barakocta.br3, { alignSelf: 'center' }]}
+                        onPress={() => {
+                            fetchData()
+                        }}>
+                        <Text style={[{ color: Colors.tertiary, fontFamily: 'Alexandria', fontSize: 14, },]}>تحديث</Text>
+                    </TouchableOpacity>
                     <View style={[{ backgroundColor: Colors.fourth, borderRadius: 20, }]} >
                         {renderorders}
                     </View>

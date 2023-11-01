@@ -99,6 +99,7 @@ export default function AddDish({ navigation }) {
     });
     const GetCategories = () => {
         setIsFetchDataError(false)
+        setIsLoading(true);
         console.log("OrderDelivary Getcategories");
         const config = {
             headers: { Authorization: `Bearer ${userToken}` },
@@ -106,12 +107,13 @@ export default function AddDish({ navigation }) {
         axios
             .get(`${BaseUrl}show/categories`, config)
             .then((response) => {
+                setIsLoading(false);
                 setcategories(response.data.categories);
-                setIsLoaded(true);
 
             })
             .catch(async (e) => {
                 setIsFetchDataError(true)
+                console.log("Getcategories", e);
                 console.log("Getcategories", e?.response?.data.message);
                 console.log("Getcategories", e?.response?.status);
                 if (e?.response?.status == 401) {
